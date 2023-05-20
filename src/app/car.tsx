@@ -5,6 +5,6 @@ export default async function getCar(numPlate: String) {
 
 
 
-    const res = await fetch(`https://test.carjam.co.nz/api/car/?plate=${numPlate}&key=${carjamApi}&f=json`)
+    const res = await fetch(`https://test.carjam.co.nz/api/car/?plate=${numPlate}&key=${carjamApi}&f=json`, { cache: 'no-store' })
     return res.json()
 }
