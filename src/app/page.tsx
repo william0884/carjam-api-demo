@@ -133,7 +133,7 @@ type VehicleUsage = {
 }
 
 
-export default async function Home(Car: CarPlay) {
+export default async function Home() {
   const plateArray = ['360J', 'APY771', 'W0L0JBF68Y7051756', '11UPL', '12PC', 
                       '11WGR', '12PLT']
   const item = plateArray [Math.floor(Math.random()*plateArray .length)];
