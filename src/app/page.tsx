@@ -1,11 +1,11 @@
 import getCar from './car';
 import Link from 'next/link';
 
-export type CarPlay = {
+type CarPlay = {
   idh: Idh;
 }
 
-export type Idh = {
+type Idh = {
   plate:            string;
   query_type:       string;
   created:          number;
@@ -15,7 +15,7 @@ export type Idh = {
   vehicle:          Vehicle;
 }
 
-export type Header = {
+type Header = {
   not_found:      string;
   not_assigned:   boolean;
   errors:         Errors;
@@ -23,11 +23,11 @@ export type Header = {
   is_trade_plate: boolean;
 }
 
-export type Errors = {
+type Errors = {
   "58146": string;
 }
 
-export type Vehicle = {
+type Vehicle = {
   vehicle_system_id:                             string;
   year_of_manufacture:                           string;
   make:                                          string;
@@ -102,7 +102,7 @@ export type Vehicle = {
   reported_stolen_nzta:                          string;
 }
 
-export type Inspection = {
+type Inspection = {
   latest:      string;
   type:        string;
   date:        number;
@@ -111,7 +111,7 @@ export type Inspection = {
   btn:         string;
 }
 
-export type Licence = {
+type Licence = {
   number:             string;
   licence_type:       string;
   continuous_licence: string;
@@ -119,14 +119,14 @@ export type Licence = {
   issue_datetime:     number;
 }
 
-export type Plate = {
+type Plate = {
   plate_status:       string;
   plate_type:         string;
   registration_plate: string;
   effective_date:     number;
 }
 
-export type VehicleUsage = {
+type VehicleUsage = {
   vechile_usage_code: string;
   vehicle_usage_code: string;
   effective_date:     number;
