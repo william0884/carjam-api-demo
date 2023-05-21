@@ -135,7 +135,9 @@ type VehicleUsage = {
 
 export default async function Home() {
   const plateArray = ['360J', 'APY771', 'W0L0JBF68Y7051756', '11UPL', '12PC', 
-                      '11WGR', '12PLT']
+                      '11WGR', '12PLT', '100LW', 'ARM407', '7A897161098401439',
+                    '10EDVL', '7A5AAASAVUST74169', '1174H', '7AT06606X10817474',
+                  'MAAH9000298391027','ASP247']
   const item = plateArray [Math.floor(Math.random()*plateArray .length)];
  
   const data = await getCar(item);
@@ -179,6 +181,18 @@ export default async function Home() {
          <li>Engine No: {CarData.idh.vehicle.engine_no}</li>
          
          <li>CC rating: {CarData.idh.vehicle.cc_rating}</li>
+
+         <li>Stolen?: {CarData.idh.vehicle.reported_stolen}</li>
+
+         <li>Vehicle Type: {CarData.idh.vehicle.vehicle_type}</li>
+
+         <li>Assembly Type: {CarData.idh.vehicle.assembly_type}</li>
+
+         <li>Country of Origin: {CarData.idh.vehicle.country_of_origin}</li>
+
+         <li>Gross Vehicle Mass: {CarData.idh.vehicle.gross_vehicle_mass}</li>
+
+         <li>Tare Weight: {CarData.idh.vehicle.tare_weight}</li>
 
         </ul>
         <footer className="align-middle fixed bottom-0 left-0 w-full text-center text-gray-200 bg-gray-900 h-10">
