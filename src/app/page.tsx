@@ -79,7 +79,6 @@ type CarData = {
       result_of_latest_cof_inspection: string;
       expiry_date_of_last_successful_cof: number;
       inspections: Inspection[];
-      licences: Licence[];
       continuous_licence: string;
       licence_type: string;
       licence_expiry_date: number;
