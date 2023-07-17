@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import CarImg from '../../public/cars.jpeg'
 type CarData = {
   idh: {
     plate: string;
@@ -157,16 +158,22 @@ export default function MyForm() {
 
   return (
     <main>
-      <form className='mt-60 ml-5	' onSubmit={handleSubmit}>
+      <div className="container mt-40 ml-16 bg-cyan-200 h-96	w-96		bg-[url('../../public/cars.jpeg')]">
+      <span className='text-5xl top-48  ml-10'>We Buy Cars</span><br />
+      <span className='ml-4'>We will come to you and pay you on the spot</span>
+      </div>
+      <p className='text-3xl mt-3 ml-10'>Get a free no-obligation offer here</p>
+      <form className='mt-5 ml-5	' onSubmit={handleSubmit}>
         <label htmlFor="plate">Plate:</label>
         <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
           id="plate"
           name="plate"
+          placeholder="Enter Vehicle Plate Number"
           value={formData.plate}
           onChange={handleChange}
         />
-        <input type="submit" value="Submit" className="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" />
+        <input type="submit" value="Get an offer ->" className="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" />
 
         </form>
 

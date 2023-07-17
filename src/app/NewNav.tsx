@@ -75,13 +75,13 @@ export default function NewNav() {
   );
  
   return (
-    <Navbar className="mx-auto fixed  text-gray-800  ml-16 top-20 max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
-      <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+    <Navbar className="mx-auto fixed  text-gray-800  bg-white ml-16 top-20 max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
+      <div className="container mx-auto flex items-center justify-between bg-white text-blue-gray-900">
 
         <Image
       src={Logo}
-      width={500}
-      height={500}
+      width={150}
+      height={150}
       alt="Picture of the author"
     />
         <div className="hidden lg:block">{navList}</div>
