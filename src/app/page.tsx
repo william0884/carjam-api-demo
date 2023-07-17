@@ -231,10 +231,6 @@ export default function MyForm() {
 
 )}
 
-      <p>Some example plates: '360J', 'APY771', 'W0L0JBF68Y7051756', '11UPL', '12PC', 
-                      '11WGR', '12PLT', '100LW', 'ARM407', '7A897161098401439',
-                    '10EDVL', '7A5AAASAVUST74169', '1174H', '7AT06606X10817474',
-                  'MAAH9000298391027','ASP247'</p>
     </main>
   );
 }
