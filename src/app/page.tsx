@@ -139,7 +139,7 @@ export default function MyForm() {
 
     const res = await fetch(
       //`https://test.carjam.co.nz/api/car/?plate=${formData.plate}&key=CD14D0371AE1CA3E3486045951C4274F5DD305E8&f=json`,
-      `https://carjam.co.nz/api/car/?plate=${formData.plate}&key=B5C51A708B81214CDC6FB0033741458B2121A461=json`,
+      `https://carjam.co.nz/api/car/?plate=${formData.plate}&key=B5C51A708B81214CDC6FB0033741458B2121A461&f=json`,
 
       { cache: 'no-store' }
     );
