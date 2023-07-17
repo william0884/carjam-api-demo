@@ -157,7 +157,7 @@ export default function MyForm() {
 
   return (
     <main>
-      <form className='mt-15' onSubmit={handleSubmit}>
+      <form className='mt-60 ml-5	' onSubmit={handleSubmit}>
         <label htmlFor="plate">Plate:</label>
         <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           type="text"

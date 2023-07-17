@@ -1,5 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import NavBar from './Nav'
+import NewNav from './NewNav'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -14,6 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <NavBar />
+      <NewNav />
       <body className={inter.className}>{children}</body>
 
     </html>
