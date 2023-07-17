@@ -1,5 +1,9 @@
+"use client"
 import getCar from './car';
 import Link from 'next/link';
+import React, { useState } from 'react';
+
+
 
 type CarPlay = {
   idh: Idh;
@@ -133,15 +137,28 @@ type VehicleUsage = {
 }
 
 
-export default async function Home() {
-  const plateArray = ['360J', 'APY771', 'W0L0JBF68Y7051756', '11UPL', '12PC', 
-                      '11WGR', '12PLT', '100LW', 'ARM407', '7A897161098401439',
-                    '10EDVL', '7A5AAASAVUST74169', '1174H', '7AT06606X10817474',
-                  'MAAH9000298391027','ASP247']
-  const item = plateArray [Math.floor(Math.random()*plateArray .length)];
+
+
+export default async function Home(props) {
+
+  const [plate, setPlate] = useState('')
+
+
+  //const plateArray = ['360J', 'APY771', 'W0L0JBF68Y7051756', '11UPL', '12PC', 
+  //                    '11WGR', '12PLT', '100LW', 'ARM407', '7A897161098401439',
+  //                  '10EDVL', '7A5AAASAVUST74169', '1174H', '7AT06606X10817474',
+  //                'MAAH9000298391027','ASP247']
+  //const item = plateArray [Math.floor(Math.random()*plateArray .length)];
  
-  const data = await getCar(item);
-  const CarData: CarPlay = data;
+  //onst data = await getCar(item);
+  //const CarData: CarPlay = data;
+  
+
+  const handleSubmit = async (e) => {
+    props.handleSubmit(plate)
+
+  }
+
   return (
     
     <main className="flex min-w-screen flex-col items-center justify-between gap-1">
@@ -152,49 +169,14 @@ export default async function Home() {
           </nav>    
 
 
-        <p className="text-3xl left-0 top-0 my-2	mt-24">
-        {CarData.idh.vehicle.year_of_manufacture} {CarData.idh.vehicle.make} {CarData.idh.vehicle.model}
-       </p>
-      
-         <p className="text-2xl left-0 top-0 my-2	mt-8">
+          <form className='mt-15' onSubmit={handleSubmit}>
+      <h1> Our Form </h1>
+      <label htmlFor="plate">Number plate:</label>
+      <input type="text" value={plateValues.plate} onChange={(e) => setPlateValues({ ...plateValues, plate: e.target.value })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
 
-       {CarData.idh.vehicle.submodel}
-       </p>
-       
-       <ul className="text-1xl left-0 top-0 my-2	mt-8">
-        <li>Year: {CarData.idh.vehicle.year_of_manufacture}</li>
+      <input type="submit" value="Submit" className="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" />
+    </form>
 
-         <li>Make: {CarData.idh.vehicle.make}</li>
-         
-         <li>Model: {CarData.idh.vehicle.model}</li>
-         
-         <li>Colour: {CarData.idh.vehicle.main_colour}</li>
-         
-         <li>Second Colour: {CarData.idh.vehicle.second_colour}</li>
-         
-         <li>Submodel: {CarData.idh.vehicle.submodel}</li>
-         
-         <li>Body Style: {CarData.idh.vehicle.body_style}</li>
-         
-         <li>Plate: {CarData.idh.vehicle.plate}</li>
-         
-         <li>Engine No: {CarData.idh.vehicle.engine_no}</li>
-         
-         <li>CC rating: {CarData.idh.vehicle.cc_rating}</li>
-
-         <li>Stolen?: {CarData.idh.vehicle.reported_stolen}</li>
-
-         <li>Vehicle Type: {CarData.idh.vehicle.vehicle_type}</li>
-
-         <li>Assembly Type: {CarData.idh.vehicle.assembly_type}</li>
-
-         <li>Country of Origin: {CarData.idh.vehicle.country_of_origin}</li>
-
-         <li>Gross Vehicle Mass: {CarData.idh.vehicle.gross_vehicle_mass}</li>
-
-         <li>Tare Weight: {CarData.idh.vehicle.tare_weight}</li>
-
-        </ul>
         <footer className="align-middle fixed bottom-0 left-0 w-full text-center text-gray-200 bg-gray-900 h-10">
             <span><Link href="/">Created by William Mckee for a start-up mobile car-buying service</Link> 
             </span>

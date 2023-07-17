@@ -1,7 +1,7 @@
 
 export default async function getCar(numPlate: String) {
 
-    const carjamApi = process.env.CARJAM_APIKEY;
+    const carjamApi = process.env.CARJAM_APIKEY_TEST;
 
 
 
